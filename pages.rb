@@ -1,6 +1,7 @@
 class Pages
   def start
     p = Picnav.new
+    # TODO: Add function to select multiple images at the same time?
 
     get '/' do
       erb %{
@@ -21,12 +22,6 @@ class Pages
 
     get '/show_images' do
       p.show_images
-      # erb %{
-      #   <html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-      #   <head></head>
-      #   #{p.output.to_s}
-      #   </html>
-      # }
     end
     
     get '/link/:a' do
