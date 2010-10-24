@@ -10,7 +10,7 @@ class Pages
     end
     
     get '/initialise' do
-      p.delete_src_images && gp.initialise && p.collate_image_urls && p.save_images
+      p.delete_src_images && p.initialise && p.collate_image_urls && p.save_images
     end
 
     get '/delete' do
@@ -30,7 +30,8 @@ class Pages
     end
     
     get '/link/:a' do
-      
+      "Linked to 1"
+      # TODO: Make these links link to something!
     end
   end
 end

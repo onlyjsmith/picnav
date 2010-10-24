@@ -1,5 +1,6 @@
 class Picnav
   attr_accessor :image_urls, :doc, :output, :from, :to
+  # TODO: Add data structure to hold the links between the images
   
   def initialise(*url)
     @urls = [] 
@@ -56,7 +57,8 @@ class Picnav
     Dir.foreach(dir) do |f|
       if f == '.' or f == '..' then next
       else 
-        g = "<img src='src_imgs/#{f}'/>\n"
+        # g = "<img src='src_imgs/#{f}'/>\n"
+        g = "<a href='/link/1'><img src='src_imgs/#{f}'/></a>\n"
         @output.push(g.to_s)
       end
     end
